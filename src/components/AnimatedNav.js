@@ -27,12 +27,13 @@ const AnimatedNav = props => {
     });
   });
   function MakeTabs(navInfo) {
-    const info = Object.keys(navInfo.navInfo).map(function(key) {
+    const info = Object.keys(navInfo.navInfo).map(function(key, i) {
       return (
         <a
           href="#"
           className="nav-item is-active"
           active-color={navInfo.navInfo[key]}
+          key={i}
         >
           {key}
         </a>
